@@ -254,6 +254,8 @@ UDD5 数据集全量 40 张评估结果，四后端精度完全对齐：
 | `F.unfold` (im2col) | aclnnIm2col 不可用 | index_select + reshape |
 | `F.interpolate(bilinear)` | 部分场景不可用 | 可分离 index_select |
 
+> **注意：** `npu_compat.py` 仅用于 310B 上直接运行 PyTorch 推理的场景（`eval.py` / `demo.py`）。OM 离线推理不依赖它——相关算子在 ONNX 导出阶段（`scripts/export_onnx.py`）已通过等价图变换完成替换，编译后的 OM 模型由 ACL runtime 直接执行。
+
 ## NPU 项目结构
 
 ```
