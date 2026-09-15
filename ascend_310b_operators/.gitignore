@@ -1,0 +1,10 @@
+**/.scratch/
+**/build/
+**/dist/
+**/kernel_meta/
+**/logs/
+**/profile*/
+**/*.o
+**/*.so
+**/*.om
+**/*.log

@@ -1,0 +1,35 @@
+# SegEarth-OV NPU 依赖 (CANN 9.0.0 + Ascend 910)
+# Python 3.10, torch 2.8.0, torch-npu 2.8.0.post4
+# 安装前请确保: source /usr/local/Ascend/cann-9.0.0/set_env.sh
+# 并设置: export LD_LIBRARY_PATH=/usr/local/Ascend/cann-9.0.0/aarch64-linux/lib64:$LD_LIBRARY_PATH
+
+# PyTorch NPU 生态
+torch==2.8.0
+torch-npu==2.8.0.post4
+torchvision==0.23.0
+
+# OpenMMLab 生态 (mmcv 需 --no-build-isolation 编译安装)
+# pip install mmcv==2.1.0 --no-build-isolation
+mmcv==2.1.0
+mmengine==0.10.7
+mmsegmentation==1.2.2
+
+# SimFeatUp 依赖 (通过 .pth 加入路径, 不编译 CUDA 扩展)
+kornia==0.8.2
+omegaconf==2.3.1
+scikit-learn==1.7.2
+
+# 其余依赖
+einops==0.8.2
+fairscale==0.4.13
+ftfy==6.3.1
+matplotlib==3.10.9
+numpy==2.2.6
+opencv-python==5.0.0.93
+opencv-python-headless==5.0.0.93
+openpyxl==3.1.5
+regex==2026.7.19
+safetensors==0.8.0
+timm==1.0.28
+tqdm==4.70.0
+transformers==4.44.2
