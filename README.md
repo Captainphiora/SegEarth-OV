@@ -204,9 +204,7 @@ bash scripts/step2_build_om.sh
 SOC_VERSION=Ascend310B1 bash scripts/step2_build_om.sh
 ```
 
-SOC_VERSION 通过 `torch.npu.get_device_name()` 查询，常见值：
-- `Ascend910_9382` — 910 芯片
-- `Ascend310B1` — 310B1 推理卡
+SOC_VERSION 通过 `torch.npu.get_device_name()` 查询：`Ascend910_9382`、`Ascend310B1`。
 
 ### Step 3: ACL 推理评估
 
