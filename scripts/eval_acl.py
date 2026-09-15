@@ -3,7 +3,7 @@
 支持 pytorch 和 acl 两种后端，统一走 Session 接口，计算 mIoU/aAcc/mAcc。
 
 用法:
-    source scripts/env_npu.sh
+    source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
 
     # PyTorch eval
     python scripts/eval_acl.py --config configs/cfg_udd5.py --backend pytorch

@@ -1,7 +1,7 @@
 """导出 SegEarth CLIP ViT-B/16 全部组件为 ONNX，用于 310B OM 离线推理。
 
 用法 (在 910 上执行):
-    source scripts/env_npu.sh
+    source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
     python scripts/export_onnx.py
 
 输出:

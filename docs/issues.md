@@ -24,7 +24,7 @@ RuntimeError: AclGetCannAttribute(ACL_CANN_ATTR_INF_NAN, &enable), error code is
 
 **解决**
 
-使用项目自带的 `scripts/env_npu.sh`，它显式指向 CANN 9.0.0：
+使用 CANN 自带的 `set_env.sh` 初始化环境：
 
 ```bash
 export CANN_HOME=/usr/local/Ascend/cann-9.0.0

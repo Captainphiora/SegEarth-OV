@@ -1,7 +1,7 @@
 """SegEarth-OV 统一多后端推理 demo。
 
 用法:
-    source scripts/env_npu.sh
+    source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
 
     # PyTorch (默认)
     python scripts/demo_multi.py

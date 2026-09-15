@@ -6,7 +6,6 @@ set -e
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
-source "$SCRIPT_DIR/env_npu.sh"
 export ASCEND_OPP_PATH=/usr/local/Ascend/cann-9.0.0/opp
 
 # SOC="Ascend310B1"

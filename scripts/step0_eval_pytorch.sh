@@ -9,10 +9,6 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 cd "$REPO_ROOT"
 
-export NPU_ID="${NPU_ID:-4}"
-export SKIP_NPU_CHECK=1
-source "$REPO_ROOT/scripts/env_npu.sh"
-
 CONFIG="configs/cfg_udd5.py"
 
 TS=$(date +%Y%m%d_%H%M%S)
@@ -23,7 +19,6 @@ LOG="$LOG_DIR/eval.log"
 echo "========================================"
 echo " Step 0: PyTorch Baseline (eval.py)"
 echo " Config: $CONFIG"
-echo " NPU:    $NPU_ID"
 echo " Log:    $LOG_DIR"
 echo "========================================"
 

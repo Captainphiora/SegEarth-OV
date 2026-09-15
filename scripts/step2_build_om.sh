@@ -15,10 +15,6 @@ OM_DIR="$REPO_ROOT/models/om"
 
 SOC_VERSION="${SOC_VERSION:-Ascend910_9382}"
 
-export NPU_ID="${NPU_ID:-4}"
-export SKIP_NPU_CHECK=1
-source "$REPO_ROOT/scripts/env_npu.sh"
-
 mkdir -p "$OM_DIR"
 
 echo "========================================"

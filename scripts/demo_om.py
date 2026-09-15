@@ -4,7 +4,7 @@
 轻量级单图 / 批量推理 + 可视化，不依赖 MMSeg Runner。
 
 用法:
-    source scripts/env_npu.sh
+    source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
 
     # 单张推理 + 可视化
     python scripts/demo_om.py -i data/UDD/UDD/UDD5/val/src/000061.JPG

@@ -11,12 +11,8 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 cd "$REPO_ROOT"
 
-NPU_ID="${NPU_ID:-4}"
 MAX_SAMPLES="${MAX_SAMPLES:-5}"
 TEMPLATE="full"
-
-export NPU_ID
-source "$REPO_ROOT/scripts/env_npu.sh"
 
 OM_DIR="$REPO_ROOT/models/om"
 CONFIG="configs/cfg_udd5.py"
@@ -30,7 +26,6 @@ echo "========================================"
 echo " Step 3: ACL Inference Evaluation"
 echo " OM dir:      $OM_DIR"
 echo " Config:      $CONFIG"
-echo " NPU:         $NPU_ID"
 echo " Max samples: $MAX_SAMPLES"
 echo " Log dir:     $LOG_DIR"
 echo "========================================"

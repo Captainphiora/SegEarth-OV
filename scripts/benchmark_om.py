@@ -6,7 +6,7 @@
   - results/<backend>/seg_pred.png 分割结果 (用于精度对比)
 
 用法:
-    source scripts/env_npu.sh
+    source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
     python scripts/benchmark_om.py                  # 全量 (pytorch + acl + acl_stage)
     python scripts/benchmark_om.py --backends acl acl_stage  # 只跑指定后端
 """

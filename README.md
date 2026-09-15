@@ -148,22 +148,13 @@ conda activate SegEarth
 # 2. 安装依赖
 pip install -r requirements_npu.txt
 
-# 3. 初始化 NPU 环境（每次新终端执行）
-source scripts/env_npu.sh
+# 3. 初始化 CANN 环境（每次新终端执行）
+source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
 ```
-
-`scripts/env_npu.sh` 支持通过环境变量覆盖配置：
-
-| 变量 | 默认值 | 说明 |
-|------|--------|------|
-| `CANN_HOME` | `/usr/local/Ascend/cann-9.0.0` | CANN 安装路径 |
-| `NPU_ID` | `0` | NPU 设备编号 |
-| `CONDA_ENV` | `SegEarth` | Conda 环境名 |
 
 ## PyTorch 推理 (NPU)
 
 ```bash
-source scripts/env_npu.sh
 python eval.py --config configs/cfg_udd5.py
 ```
 
@@ -274,7 +265,6 @@ SegEarth-OV/
 ├── segearth_segmentor.py       # 模型定义 (cuda→npu)
 ├── ascend_310b_operators/      # 6 个 310B 自定义算子
 ├── scripts/
-│   ├── env_npu.sh              # NPU 环境初始化
 │   ├── export_onnx.py          # ONNX 导出 (310B 优化版)
 │   ├── eval_acl.py             # 三后端统一评估
 │   ├── step0_eval_pytorch.sh   # PyTorch 基线

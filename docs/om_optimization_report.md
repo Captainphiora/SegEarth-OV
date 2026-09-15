@@ -39,7 +39,7 @@ SegEarth-OV 是一个基于 CLIP ViT-B/16 + JBU upsampler 的开放词汇遥感�
 ### 2.2 ATC 编译
 
 ```bash
-source scripts/env_npu.sh
+source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
 export ASCEND_OPP_PATH=/usr/local/Ascend/cann-9.0.0/opp
 atc --model=models/onnx/xxx.onnx --framework=5 --output=models/om/xxx \
     --soc_version=Ascend910_9382 --log=error
@@ -146,7 +146,7 @@ for idx in range(1, K*K):
 
 ```bash
 # 激活环境（自动设置 conda + CANN + NPU）
-source scripts/env_npu.sh
+source /usr/local/Ascend/ascend-toolkit/latest/set_env.sh
 ```
 
 ### 6.2 ONNX 导出 + ATC 编译

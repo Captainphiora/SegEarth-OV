@@ -13,10 +13,6 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 REPO_ROOT="$(dirname "$SCRIPT_DIR")"
 cd "$REPO_ROOT"
 
-export NPU_ID="${NPU_ID:-4}"
-export SKIP_NPU_CHECK=1
-source "$REPO_ROOT/scripts/env_npu.sh"
-
 ONNX_DIR="$REPO_ROOT/models/onnx"
 
 echo "========================================"

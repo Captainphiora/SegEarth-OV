@@ -13,7 +13,6 @@ MAX_SAMPLES=5         # 0 = 全量
 # ====================================
 
 export NPU_ID
-source "$SCRIPT_DIR/env_npu.sh"
 
 CONFIG="configs/cfg_udd5.py"
 

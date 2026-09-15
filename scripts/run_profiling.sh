@@ -30,7 +30,6 @@ if [[ ! -f "$NPU_PROFILE" ]]; then
 fi
 
 export NPU_ID
-source "$SCRIPT_DIR/env_npu.sh"
 
 APP_CMD=""
 EXTRA_ARGS=""
